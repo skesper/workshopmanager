@@ -7,10 +7,15 @@
 package de.kesper.persistence.model;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -20,17 +25,17 @@ import javax.persistence.Id;
 public class Customer implements Serializable {
     private static final long serialVersionUID = 1L;
     
+    private Long id;
     private String firstName;
     private String familyName;
     private String street;
     private String city;
     private int zipCode;
+    private List<Car> cars;
     
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
     public Long getId() {
         return id;
     }
@@ -39,6 +44,7 @@ public class Customer implements Serializable {
         this.id = id;
     }
 
+    @Column(length = 50, nullable = true)
     public String getFirstName() {
         return firstName;
     }
@@ -47,6 +53,7 @@ public class Customer implements Serializable {
         this.firstName = firstName;
     }
 
+    @Column(length = 50, nullable = true)
     public String getFamilyName() {
         return familyName;
     }
@@ -55,6 +62,7 @@ public class Customer implements Serializable {
         this.familyName = familyName;
     }
 
+    @Column(length = 50, nullable = true)
     public String getStreet() {
         return street;
     }
@@ -63,6 +71,7 @@ public class Customer implements Serializable {
         this.street = street;
     }
 
+    @Column(length = 50, nullable = true)
     public String getCity() {
         return city;
     }
@@ -71,12 +80,22 @@ public class Customer implements Serializable {
         this.city = city;
     }
 
+    @Column(length = 10, nullable = true)
     public int getZipCode() {
         return zipCode;
     }
 
     public void setZipCode(int zipCode) {
         this.zipCode = zipCode;
+    }
+
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
     }
 
     @Override
