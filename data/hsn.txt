@@ -1,0 +1,189 @@
+0005#BMW, Glas, Mini
+0009#Mercedes-Benz
+0016#Barkas
+0012#Mercedes-Benz
+0019#Hanomag
+0020#Borgward
+0024#Hanomag
+0035#Opel
+0037#Audi
+0039#Opel
+0054#Hanomag
+0060#Mercedes-Benz
+0273#Lloyd
+0575#BMW Motorsport
+0583#Porsche
+0588#Audi
+0590#Audi
+0591#Audi
+0598#Glas
+0600#Audi, Porsche, Volkswagen
+0603#Volkswagen
+0708#Mercedes-Benz
+0709#Mercedes-Benz
+0710#Mercedes-Benz
+0845#Sachsenring
+0873#Automobilwerk Eisenach
+0901#Ligier
+0928#Ford
+0950#Kunststoff, Porsche
+0999#Mercedes-Benz, Smart
+1001#General Motors
+1002#Cadillac
+1003#Chevrolet
+1004#Chrysler, Fiat, Talbot
+1005#Ford
+1006#Cadillac, Chevrolet, General Motors, Opel
+1012#Mitsubishi
+1018#General Motors
+1021#General Motors
+1023#Chrysler
+1028#Ford
+1032#Mazda
+1048#Mitsubishi
+1113#Lada
+1150#Chevrolet
+1153#Honda
+1158#Chevrolet
+1159#Toyota
+1169#Subaru
+1178#Honda
+1260#Hyundai, Kia
+1313#Mercedes-Benz, Smart
+1329#Nissan
+1349#Hyundai, Kia
+1400#Mitsubishi
+1414#Mercedes-Benz
+1549#Mia
+1590#Land Rover, Jaguar
+1904#Chrysler
+1906#General Motors
+2002#Mini, Rover
+2013#Rover
+2020#LDV
+2028#Ford
+2049#Jaguar, Mini, Rover
+2051#Jaguar
+2052#Mini, Rover
+2055#Honda, Mini, Rover
+2068#Vauxhall
+2082#Rover
+2108#Rover
+2111#Honda, Mini, Rover
+2116#Morgan
+2125#Nissan
+2126#Vauxhall
+2127#Isuzu, Opel
+2130#Toyota
+2131#Honda (England)
+2140#Rover
+2142#Rover
+2143#Rover
+2149#Jaguar, Mini, Rover
+3001#Citroën
+3003#Peugeot
+3004#Dacia, Renault
+3041#Opel
+3090#Talbot
+3091#Chrysler, Talbot
+3092#Talbot
+3128#Renault, Talbot
+3144#Nissan
+3333#Dacia, Renault
+4000#Alfo Romeo, Fiat
+4001#Alfo Romeo, Fiat, Lancia
+4002#Fiat, Lancia
+4005#Lancia
+4014#Maserati
+4022#Lancia
+4025#Mini
+4026#Lamborghini
+4067#Alfa Romeo
+4073#Mini
+4106#Fiat
+4107#Fiat
+4114#Alfo Romeo, Lancia
+4136#Alfo Romeo, Fiat, Lancia
+4192#Iveco
+5003#Mazda
+5013#Daihatsu, Toyota, Lexus
+5016#Volvo
+5032#Saab
+5048#Toyota
+5980#Mercedes-Benz
+5984#Hyundai
+6019#Mercedes-Benz
+7009#Smart
+7100#Honda (Japan)
+7102#Suzuki
+7104#Toyota
+7105#Nissan
+7106#Subaru
+7107#Mitsubishi
+7108#Mazda
+7111#Daihatsu
+7115#Isuzu
+7118#Ford, Mazda
+7401#Proton
+7431#Mitsubishi
+7475#Honda
+7503#Nissan
+7526#Opel
+7528#Ford
+7529#Nissan
+7593#Fiat, Seat
+7599#Talbot
+7605#Mercedes-Benz
+7606#Nissan
+7612#Suzuki
+7738#Bohse
+7818#Barkas
+7907#Audi
+7909#BMW M
+7967#Audi
+8002#Škoda
+8004#Škoda
+8102#Zastava
+8201#Dacia
+8202#Dacia
+8203#Dacia, Intreprinderea
+8204#Intreprinderea
+8212#Dacia
+8251#SsangYong
+8252#Hyundai
+8253#Kia
+8255#Chevrolet, Daewoo
+8258#Hyundai
+8260#Chevrolet, Daewoo
+8265#Chevrolet
+8306#Fiat, Subaru, Suzuki
+8307#Audi
+8352#Suzuki
+8357#Hyundai
+8358#Tata
+8566#Ford
+8773#Smart
+9101#Volvo
+9102#Saab
+9107#Saab
+9116#Cadillac, Saab
+9206#Fiat
+9308#Lada
+9310#AZLK Moskau, Lada
+9402#Saab
+9628#Ford
+9629#Volvo
+9644#Mitsubishi, Volvo
+9648#Nissan
+9708#Volvo
+9747#Volvo
+9758#Mitsubishi
+9891#Smart
+
+
+
+
+
+
+
+
