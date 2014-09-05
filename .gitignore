@@ -21,3 +21,4 @@ nb-configuration.xml
 faces-config.NavData
 
 cp.bat
+/workshopmanager-web/src/main/webapp/resources/css/style.css

@@ -16,6 +16,8 @@ import javax.inject.Named;
 @SessionScoped
 public class SessionBean implements Serializable {
 
+    private String version = "v1.0";
+    
     private float valueAddedTax = 19.F;
 
     public float getValueAddedTax() {
@@ -24,5 +26,13 @@ public class SessionBean implements Serializable {
 
     public void setValueAddedTax(float valueAddedTax) {
         this.valueAddedTax = valueAddedTax;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
     }
 }
