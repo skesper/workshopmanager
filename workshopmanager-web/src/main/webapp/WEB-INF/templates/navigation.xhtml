@@ -7,9 +7,9 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h:form id="navigationForm" class="bot32">
+        <h:form id="navigationForm" class="bot32" rendered="#{sessionBean.authenticated}">
             <p:menubar>
-                <p:menuitem value="Startseite" url="/index.xhtml" />
+                <p:menuitem value="Startseite" url="/restricted/index.xhtml" />
                 <p:submenu label="Kunde">
                     <p:menuitem value="Neu" url="#" />
                 </p:submenu>

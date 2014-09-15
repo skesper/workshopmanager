@@ -3,44 +3,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
     </h:head>
     <h:body>
         <ui:composition template="/WEB-INF/templates/maintemplate.xhtml">
-            <ui:define name="title">Suche</ui:define>
-            <ui:define name="comment">Suchen Sie hier nach Kunden oder Fahrzeugen</ui:define>
+            <ui:define name="title">Anmeldung</ui:define>
+            <ui:define name="comment"></ui:define>
             <ui:define name="content">
                 <h:form class="grey">
                     <h:panelGrid columns="2">
-                        <h:outputLabel value="Name:"/>
-                        <h:inputText value="#{startPageBean.name}"/>
-                        <h:outputLabel value="Kennzeichen:"/>
-                        <h:inputText value="#{startPageBean.registrationNumber}"/>
-                        <p:commandButton action="#{startPageBean.doSearch()}" value="SUCHEN" styleClass="ui-priority-primary" update="@form"/>
+                        <h:outputLabel value="Username:"/>
+                        <p:inputText value="#{sessionBean.userName}"/>
+                        <h:outputLabel value="Password:"/>
+                        <p:password value="#{sessionBean.password}"/>
                     </h:panelGrid>
-                    <p:dataTable id="customerTable" var="customer" value="#{startPageBean.customerSearchResult}" emptyMessage="Es wurden keine Einträge gefunden." style="width: 100%;" class="top32">
-                        <f:facet name="header">
-                            Kunden
-                        </f:facet>
-
-                        <p:column headerText="Name" sortBy="#{customer.familyName}">
-                            <h:outputText value="#{customer.familyName}, #{customer.firstName}"/>
-                        </p:column>
-
-                        <p:column headerText="Straße">
-                            <h:outputText value="#{customer.street}"/>
-                        </p:column>
-
-                        <p:column headerText="PLZ">
-                            <h:outputText value="#{customer.zipCode}"/>
-                        </p:column>
-
-                        <p:column headerText="Stadt">
-                            <h:outputText value="#{customer.city}"/>
-                        </p:column>
-                    </p:dataTable>
+                    <p:commandButton action="#{sessionBean.doLogin()}" value="ANMELDEN" styleClass="ui-priority-primary" update="@form"/>
                 </h:form>
             </ui:define>
         </ui:composition>
