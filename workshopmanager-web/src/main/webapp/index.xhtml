@@ -2,23 +2,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
     </h:head>
     <h:body>
         <ui:composition template="/WEB-INF/templates/maintemplate.xhtml">
-            <ui:define name="title">Anmeldung</ui:define>
+            <ui:define name="title"></ui:define>
             <ui:define name="comment"></ui:define>
             <ui:define name="content">
-                <h:form class="grey">
-                    <h:panelGrid columns="2">
-                        <h:outputLabel value="Username:"/>
-                        <p:inputText value="#{sessionBean.userName}"/>
-                        <h:outputLabel value="Password:"/>
-                        <p:password value="#{sessionBean.password}"/>
-                    </h:panelGrid>
-                    <p:commandButton action="#{sessionBean.doLogin()}" value="ANMELDEN" styleClass="ui-priority-primary" update="@form"/>
+                <h:form class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-4">
+                            <h1>Anmeldung</h1>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-4">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                <h:inputText value="#{sessionBean.userName}" styleClass="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-4">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                <h:inputSecret value="#{sessionBean.password}" styleClass="form-control"/>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-4">
+                            <h:commandButton action="#{sessionBean.doLogin()}" value="ANMELDEN" styleClass="btn btn-primary"/>
+                        </div>
+                    </div>
                 </h:form>
             </ui:define>
         </ui:composition>
