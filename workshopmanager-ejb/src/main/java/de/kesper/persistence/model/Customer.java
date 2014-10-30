@@ -26,6 +26,7 @@ public class Customer implements Serializable {
     private static final long serialVersionUID = 1L;
     
     private Long id;
+    private String title;
     private String firstName;
     private String familyName;
     private String street;
@@ -42,6 +43,15 @@ public class Customer implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    @Column(length = 50, nullable = true)
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Column(length = 50, nullable = true)
@@ -89,7 +99,7 @@ public class Customer implements Serializable {
         this.zipCode = zipCode;
     }
 
-    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     public List<Car> getCars() {
         return cars;
     }
@@ -120,7 +130,7 @@ public class Customer implements Serializable {
 
     @Override
     public String toString() {
-        return "de.kesper.persistence.model.Customer[ id=" + id + " ]";
+        return familyName+", "+firstName;
     }
     
 }

@@ -5,15 +5,15 @@
 package de.kesper.persistence.model;
 
 import java.io.Serializable;
-import java.util.List;
-import javax.persistence.CascadeType;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -25,7 +25,7 @@ public class OrderSet implements Serializable {
     private Long id;
     private Customer customer;
     private Car car;
-    private List<WorkItem> workItems;
+    private Date dueDate;
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -55,13 +55,13 @@ public class OrderSet implements Serializable {
         this.car = car;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, optional = true)
-    public List<WorkItem> getWorkItems() {
-        return workItems;
+    @Temporal(TemporalType.TIMESTAMP)
+    public Date getDueDate() {
+        return dueDate;
     }
 
-    public void setWorkItems(List<WorkItem> workItems) {
-        this.workItems = workItems;
+    public void setDueDate(Date dueDate) {
+        this.dueDate = dueDate;
     }
-
+    
 }

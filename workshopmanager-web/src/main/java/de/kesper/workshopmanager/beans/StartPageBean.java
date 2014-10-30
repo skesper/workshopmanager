@@ -8,6 +8,7 @@ import de.kesper.persistence.model.Car;
 import de.kesper.persistence.model.Customer;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import javax.faces.view.ViewScoped;
@@ -45,7 +46,14 @@ public class StartPageBean implements Serializable {
     public void doSearch() {
         System.out.println("DEBUG: search - "+name+", "+registrationNumber);
         createTestData();
-        System.out.println("DEBUG: created "+customerSearchResult.size()+" customers.");
+        //System.out.println("DEBUG: created "+customerSearchResult.size()+" customers.");
+    }
+    
+    public void doReset() {
+        customerSearchResult = null;
+        carSearchResult = null;
+        name = null;
+        registrationNumber = null;
     }
 
     public List<Customer> getCustomerSearchResult() {
@@ -62,6 +70,14 @@ public class StartPageBean implements Serializable {
 
     public void setCarSearchResult(List<Car> carSearchResult) {
         this.carSearchResult = carSearchResult;
+    }
+    
+    public boolean hasCarSearchResult() {
+        return carSearchResult!=null && carSearchResult.size()>0;
+    }
+    
+    public boolean hasCustomerSearchResult() {
+        return customerSearchResult!=null && customerSearchResult.size()>0;
     }
     
     private void createTestData() {
@@ -83,5 +99,16 @@ public class StartPageBean implements Serializable {
         c.setStreet("Albertstraße 12a");
         c.setZipCode(56122);
         customerSearchResult.add(c);
+        
+        carSearchResult = new ArrayList<>();
+        Car car = new Car();
+        car.setModel("523 i");
+        car.setVendor("BMW");
+        car.setRegCity("KO");
+        car.setRegLetters("MW");
+        car.setRegDigits("551");
+        car.setTuvDate(new Date());
+        car.setVin("W0112345678910112");
+        carSearchResult.add(car);
     }
 }

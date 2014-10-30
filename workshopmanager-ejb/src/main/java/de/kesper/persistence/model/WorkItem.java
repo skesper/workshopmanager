@@ -23,10 +23,10 @@ public class WorkItem implements Serializable {
     private Long id;
     
     private String name;
-    private float units = 0.F;
-    private float pricePerUnit = 0.F;
-    private float tax = 0.F;
-    private float discountedPrice = 0.F;
+    private double units = 0.F;
+    private double pricePerUnit = 0.F;
+    private double tax = 0.F;
+    private double discountedPrice = 0.F;
     private OrderSet orderSet;
 
     @Id
@@ -48,35 +48,35 @@ public class WorkItem implements Serializable {
         this.name = name;
     }
 
-    public float getUnits() {
+    public double getUnits() {
         return units;
     }
 
-    public void setUnits(float units) {
+    public void setUnits(double units) {
         this.units = units;
     }
 
-    public float getPricePerUnit() {
+    public double getPricePerUnit() {
         return pricePerUnit;
     }
 
-    public void setPricePerUnit(float pricePerUnit) {
+    public void setPricePerUnit(double pricePerUnit) {
         this.pricePerUnit = pricePerUnit;
     }
 
-    public float getTax() {
+    public double getTax() {
         return tax;
     }
 
-    public void setTax(float tax) {
+    public void setTax(double tax) {
         this.tax = tax;
     }
 
-    public float getDiscountedPrice() {
+    public double getDiscountedPrice() {
         return discountedPrice;
     }
 
-    public void setDiscountedPrice(float discountedPrice) {
+    public void setDiscountedPrice(double discountedPrice) {
         this.discountedPrice = discountedPrice;
     }
 

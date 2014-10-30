@@ -27,28 +27,81 @@
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <h:commandButton action="#{startPageBean.doSearch()}" value="SUCHEN" styleClass="btn btn-primary"/>
+                            <h:commandButton action="#{startPageBean.doReset()}" value="ZURÜCKSETZEN" styleClass="btn btn-default lm16"/>
                         </div>
                     </div>
                     
-                    <h:dataTable id="customerTable" var="customer" value="#{startPageBean.customerSearchResult}" style="width: 100%;" class="top32 table table-striped table-hover">
+                    <h:dataTable id="customerTable" var="customer" 
+                                 value="#{startPageBean.customerSearchResult}" 
+                                 style="width: 100%;" class="top32 table table-striped table-hover"
+                                 rendered="#{startPageBean.hasCustomerSearchResult()}">
                         <f:facet name="header">
                             Kunden
                         </f:facet>
 
-                        <h:column >
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Name"/>
+                            </f:facet>
                             <h:outputText value="#{customer.familyName}, #{customer.firstName}"/>
                         </h:column>
 
                         <h:column >
+                            <f:facet name="header">
+                                <h:outputText value="Straße"/>
+                            </f:facet>
                             <h:outputText value="#{customer.street}"/>
                         </h:column>
 
-                        <h:column >
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="PLZ"/>
+                            </f:facet>
                             <h:outputText value="#{customer.zipCode}"/>
                         </h:column>
 
-                        <h:column >
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Stadt"/>
+                            </f:facet>
                             <h:outputText value="#{customer.city}"/>
+                        </h:column>
+                    </h:dataTable>
+                    
+                    <h:dataTable id="carTable" var="car" 
+                                 value="#{startPageBean.carSearchResult}" 
+                                 style="width: 100%;" class="top32 table table-striped table-hover"
+                                 rendered="#{startPageBean.hasCarSearchResult()}">
+                        <f:facet name="header">
+                            Fahrzeuge
+                        </f:facet>
+
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Kennzeichen"/>
+                            </f:facet>
+                            <h:outputText value="#{car.toRegistrationNumber()}"/>
+                        </h:column>
+
+                        <h:column >
+                            <f:facet name="header">
+                                <h:outputText value="Hersteller"/>
+                            </f:facet>
+                            <h:outputText value="#{car.vendor}"/>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Modell"/>
+                            </f:facet>
+                            <h:outputText value="#{car.model}"/>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Besitzer"/>
+                            </f:facet>
+                            <h:outputText value="#{car.owner.toString()}"/>
                         </h:column>
                     </h:dataTable>
                 </h:form>

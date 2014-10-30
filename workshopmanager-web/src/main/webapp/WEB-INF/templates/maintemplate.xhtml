@@ -11,7 +11,7 @@
     </h:head>
     <h:body>
         <div class="container">
-            <h:panelGroup rendered="#{sessionBean.authenticated}">
+            <h:form id="navigationform" rendered="#{sessionBean.authenticated}">
                 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                     <div class="container-fluid">
                         <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,35 +22,23 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">WERKSTATT MANAGER</a>
+                            <h:commandLink class="navbar-brand" action="/restricted/index" value="WERKSTATT MANAGER"/>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li><a href="#">Start</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fahrzeug <span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Neu</a></li>
-                                        <li><a href="#">Suche</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kunde <span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Neu</a></li>
-                                        <li><a href="#">Suche</a></li>
-                                    </ul>
-                                </li>
+                                <li><h:commandLink action="/restricted/car/car" value="Fahrzeuge"/></li>
+                                <li><h:commandLink action="/restricted/customer/customer" value="Kunden"/></li>
+                                <li><h:commandLink action="/restricted/invoice/invoice" value="Rechnungen"/></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="#">Abmelden</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
-                </nav>                
-            </h:panelGroup>
+                </nav>
+            </h:form>
             <h2><ui:insert name="title"/></h2>
             <p class="bot32"><ui:insert name="comment"/></p>
             <ui:insert name="content"/>
@@ -61,7 +49,7 @@
             </div>
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <h:outputScript library="js" name="jquery.min.js"/>
         <h:outputScript library="js" name="bootstrap.min.js"/>
     </h:body>
 </html>
