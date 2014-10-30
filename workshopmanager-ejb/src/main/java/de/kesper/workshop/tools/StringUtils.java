@@ -1,5 +1,5 @@
 /*
- *  30.10.2014 (C) KV RLP
+ *  30.10.2014 (C) Stephan Kesper
  */
 package de.kesper.workshop.tools;
 

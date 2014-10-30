@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:wsm="http://kesper.co/bootstrap">
     <h:head>
     </h:head>
     <h:body>
@@ -66,6 +67,13 @@
                             </f:facet>
                             <h:outputText value="#{customer.city}"/>
                         </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Aktion"/>
+                            </f:facet>
+                            <h:commandLink action="#{editCustomerBean.doEditCustomer(customer)}" value="bearbeiten"/>
+                        </h:column>
                     </h:dataTable>
                     
                     <h:dataTable id="carTable" var="car" 
@@ -103,7 +111,15 @@
                             </f:facet>
                             <h:outputText value="#{car.owner.toString()}"/>
                         </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Aktion"/>
+                            </f:facet>
+                            <h:commandLink action="#{editCarBean.doEdit(car)}" value="bearbeiten"/>
+                        </h:column>
                     </h:dataTable>
+                    <wsm:messages globalOnly="true"/>
                 </h:form>
             </ui:define>
         </ui:composition>

@@ -1,5 +1,5 @@
 /*
- *  03.09.2014 (C) KV RLP
+ *  03.09.2014 (C) Stephan Kesper
  */
 
 package de.kesper.workshopmanager.beans;

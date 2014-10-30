@@ -8,14 +8,13 @@
     </h:head>
     <h:body>
         <ui:composition template="/WEB-INF/templates/maintemplate.xhtml">
-            <ui:define name="title">Fahrzeug</ui:define>
+            <ui:define name="title">Kunde</ui:define>
             <ui:define name="content">
                 <h:form>
-                    <h:commandButton class="btn btn-primary" action="#{editCarBean.doNewCar()}" value="NEU"/>
+                    <h:commandButton class="btn btn-primary" action="#{editCustomerBean.doNewCustomer()}" value="NEU"/>
                     <wsm:messages/>
                 </h:form>
             </ui:define>
         </ui:composition>
     </h:body>
 </html>
-

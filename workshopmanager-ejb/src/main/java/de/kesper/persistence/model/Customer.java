@@ -26,12 +26,13 @@ public class Customer implements Serializable {
     private static final long serialVersionUID = 1L;
     
     private Long id;
-    private String title;
+    private Title title;
+    private Addressing addressing;
     private String firstName;
     private String familyName;
     private String street;
     private String city;
-    private int zipCode;
+    private int zipCode = 560;
     private List<Car> cars;
     
     
@@ -45,12 +46,20 @@ public class Customer implements Serializable {
         this.id = id;
     }
 
-    @Column(length = 50, nullable = true)
-    public String getTitle() {
+    public Addressing getAddressing() {
+        return addressing;
+    }
+
+    public void setAddressing(Addressing addressing) {
+        this.addressing = addressing;
+    }
+
+    @Column(nullable = true)
+    public Title getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(Title title) {
         this.title = title;
     }
 
@@ -63,7 +72,7 @@ public class Customer implements Serializable {
         this.firstName = firstName;
     }
 
-    @Column(length = 50, nullable = true)
+    @Column(length = 50)
     public String getFamilyName() {
         return familyName;
     }

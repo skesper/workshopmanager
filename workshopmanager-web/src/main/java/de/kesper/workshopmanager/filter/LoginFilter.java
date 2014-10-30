@@ -1,10 +1,11 @@
 /*
- *  15.09.2014 (C) KV RLP
+ *  15.09.2014 (C) Stephan Kesper
  */
 package de.kesper.workshopmanager.filter;
 
 import de.kesper.workshopmanager.beans.SessionBean;
 import java.io.IOException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.inject.Inject;
 import javax.servlet.Filter;
@@ -41,7 +42,7 @@ public class LoginFilter implements Filter {
             chain.doFilter(request, response);
             return;
         }
-        log.info("Denied request for "+httpRequest.getSession().getId());
+        log.log(Level.INFO, "Denied request for {0}", httpRequest.getSession().getId());
         ((HttpServletResponse)response).sendRedirect("/workshopmanager-web/index.xhtml");
     }
 

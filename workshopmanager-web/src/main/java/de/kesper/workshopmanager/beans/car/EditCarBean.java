@@ -1,11 +1,12 @@
 /*
- *  04.09.2014 (C) KV RLP
+ *  04.09.2014 (C) Stephan Kesper
  */
 
 package de.kesper.workshopmanager.beans.car;
 
 import de.kesper.persistence.model.Car;
 import de.kesper.workshop.tools.StringUtils;
+import de.kesper.workshopmanager.utils.NavigationUtils;
 import java.io.Serializable;
 import javax.enterprise.context.Conversation;
 import javax.enterprise.context.ConversationScoped;
@@ -61,11 +62,12 @@ public class EditCarBean implements Serializable {
         this.car = car;
     }
     
-    public void doEdit(Car car) {
+    public String doEdit(Car car) {
         if (conversation.isTransient()) {
             conversation.begin();
         }
         this.car = car;
+        return NavigationUtils.CAR_EDIT;
     }
     
     public String doNewCar() {
@@ -73,7 +75,7 @@ public class EditCarBean implements Serializable {
             conversation.begin();
         }
         this.car = new Car();
-        return "/restricted/car/editcar";
+        return NavigationUtils.CAR_EDIT;
     }
     
     public void doSave() {

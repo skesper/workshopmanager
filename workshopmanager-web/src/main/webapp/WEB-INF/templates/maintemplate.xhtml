@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:wsm="http://kesper.co/bootstrap">
     <h:head>
         <title>Workshop Manager #{sessionBean.version}</title>
         <h:outputStylesheet library="css" name="style.css"/>
@@ -42,8 +43,7 @@
             <h2><ui:insert name="title"/></h2>
             <p class="bot32"><ui:insert name="comment"/></p>
             <ui:insert name="content"/>
-
-            <h:messages/>
+            <wsm:messages globalOnly="true"/>
             <div class="navbar navbar-inverse navbar-fixed-bottom">
                 <img src="/workshopmanager-web/resources/images/logo-sm-white.png" style="float: right;"/>
             </div>

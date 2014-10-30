@@ -1,11 +1,13 @@
 /*
- *  04.09.2014 (C) KV RLP
+ *  04.09.2014 (C) Stephan Kesper
  */
 
 package de.kesper.workshopmanager.beans;
 
+import de.kesper.persistence.model.Addressing;
 import de.kesper.persistence.model.Car;
 import de.kesper.persistence.model.Customer;
+import de.kesper.persistence.model.Title;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -85,6 +87,7 @@ public class StartPageBean implements Serializable {
         c.setCity("Koblenz");
         c.setFamilyName("Kesper");
         c.setFirstName("Stephan");
+        c.setAddressing(Addressing.MALE);
         c.setId(5L);
         c.setStreet("Kiefernweg 2");
         c.setZipCode(56075);
@@ -94,7 +97,9 @@ public class StartPageBean implements Serializable {
         c = new Customer();
         c.setCity("Lahnstein");
         c.setFamilyName("Kessler");
-        c.setFirstName("Peter");
+        c.setFirstName("Petra");
+        c.setAddressing(Addressing.FEMALE);
+        c.setTitle(Title.DR);
         c.setId(6L);
         c.setStreet("Albertstraße 12a");
         c.setZipCode(56122);
