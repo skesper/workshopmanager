@@ -14,6 +14,9 @@ public class NavigationUtils {
 
     public static final String CUSTOMER_EDIT = "/restricted/customer/editcustomer";
     public static final String CUSTOMER_OVERVIEW = "/restricted/customer/customer";
+
+    public static final String ORDER_EDIT = "/restricted/order/editorder";
+    public static final String ORDER_OVERVIEW = "/restricted/order/order";
     
     public static final String LOGIN = "/index";
 
