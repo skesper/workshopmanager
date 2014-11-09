@@ -34,8 +34,22 @@ public class OrderBean implements Serializable {
     
     private OrderSet orderSet;
     private List<WorkItem> workItems;
-
+    private WorkItem newWorkItem;
     
+    public OrderBean() {
+        newWorkItem = new WorkItem();
+        // TODO: configure that!
+        newWorkItem.setTax(0.19);
+    }
+
+    public WorkItem getNewWorkItem() {
+        return newWorkItem;
+    }
+
+    public void setNewWorkItem(WorkItem newWorkItem) {
+        this.newWorkItem = newWorkItem;
+    }
+
     public OrderSet getOrderSet() {
         return orderSet;
     }
@@ -73,7 +87,18 @@ public class OrderBean implements Serializable {
         System.out.println("DEBUG: in doSave() - orderBean");
     }
     
+    public void doAdd() {
+        System.out.println("DEBUG: in doAdd()");
+        workItems.add(newWorkItem);
+        newWorkItem = new WorkItem();
+        // TODO: configure that!
+        newWorkItem.setTax(0.19);
+    }
+    
     public String doNewOrder() {
+        if (conversation.isTransient()) {
+            conversation.begin();
+        }
         testData();
         return NavigationUtils.ORDER_EDIT;
     }

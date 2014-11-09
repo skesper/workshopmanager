@@ -55,6 +55,34 @@
                             </div>
                         </c:forEach>
                     </div>
+                    <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-5 top8">
+                                <h:inputText value="#{orderBean.newWorkItem.name}" styleClass="form-control input-sm"/>
+                            </div>
+                            <div class="col-sm-1 text-right top8">
+                                <h:inputText value="#{orderBean.newWorkItem.units}" styleClass="form-control input-sm text-right">
+                                    <f:convertNumber maxFractionDigits="2" minFractionDigits="2" type="number"/>
+                                </h:inputText>
+                            </div>
+                            <div class="col-sm-1 text-right top8">
+                                <h:inputText value="#{orderBean.newWorkItem.pricePerUnit}" styleClass="form-control input-sm text-right">
+                                    <f:convertNumber maxFractionDigits="2" minFractionDigits="2" type="currency"/>
+                                </h:inputText>
+                            </div>
+                            <div class="col-sm-1 text-right top8">
+                                <h:inputText value="#{orderBean.newWorkItem.tax}" styleClass="form-control input-sm text-right">
+                                    <f:convertNumber maxFractionDigits="2" minFractionDigits="2" type="percent"/>
+                                </h:inputText>
+                            </div>
+                            <div class="col-sm-1 text-right top8">
+                                <h:inputText value="#{orderBean.newWorkItem.discountedPrice}" styleClass="form-control input-sm text-right">
+                                    <f:convertNumber maxFractionDigits="2" minFractionDigits="2" type="currency"/>
+                                </h:inputText>
+                            </div>
+                            <div class="col-sm-1 top8">
+                                <h:commandButton action="#{orderBean.doAdd()}" value="+" styleClass="btn btn-sm btn-primary"/>
+                            </div>
+                    </div>
                     
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
